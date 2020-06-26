@@ -1,0 +1,17 @@
+[{
+  "_id": "5ef5314bebefcf25f4e29db8",
+  "createdAt": "2020-06-25T23:19:28.410Z",
+  "paid": true,
+  "tour": "5c88fa8cf4afda39709c2955",
+  "user": "5edf638da7b3220194150a1b",
+  "price": 497,
+  "__v": 0
+},{
+  "_id": "5ef53985724675300446e279",
+  "createdAt": "2020-06-25T23:54:47.066Z",
+  "paid": true,
+  "tour": "5ef3f38561d8393b08c10f42",
+  "user": "5edf638da7b3220194150a1b",
+  "price": 1497,
+  "__v": 0
+}]
