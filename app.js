@@ -11,7 +11,6 @@ const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
-const authController = require('./controllers/authController');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRoutes');
@@ -76,14 +75,6 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-
-
-app.use('/api/v1/login', authController.login);
-app.use('/api/v1/logout', authController.logout);
-app.use('/api/v1/signup', authController.signup);
-app.use('/api/v1/forgotpassword', authController.forgotPassword);
-app.use('/api/v1/resetPassword/:token', authController.resetPassword);
-app.use('/api/v1/changepassword', authController.protect, authController.updatePassword);
 
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);

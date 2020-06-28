@@ -14,6 +14,12 @@ router.patch('/resetPassword/:token', authController.resetPassword);
 // Protect all routes after this middleware
 router.use(authController.protect);
 
+router.use('/api/v1/login', authController.login);
+router.use('/api/v1/logout', authController.logout);
+router.use('/api/v1/signup', authController.signup);
+router.use('/api/v1/forgotpassword', authController.forgotPassword);
+router.use('/api/v1/resetPassword/:token', authController.resetPassword);
+router.use('/api/v1/changepassword', authController.protect, authController.updatePassword);
 router.patch('/updateMyPassword', authController.updatePassword);
 router.get('/me', userController.getMe, userController.getUser);
 router.patch('/updateMe', userController.uploadPhoto, userController.resizedPhoto, userController.updateMe);
